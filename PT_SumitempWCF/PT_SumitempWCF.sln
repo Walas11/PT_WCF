@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PT_SumitempWCF", "PT_SumitempWCF\PT_SumitempWCF.csproj", "{A90F2FC7-C466-4EC7-B924-A5DA7DEC1423}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PT_InfraestructuraWCF", "PT_InfraestructuraWCF\PT_InfraestructuraWCF.csproj", "{5D8D16F4-8B45-4A7B-8916-1E98D497B90B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterUserWCF", "RegisterUserWCF\RegisterUserWCF.csproj", "{AA89E0B9-D445-4511-9A82-0CCD640FE37E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5D8D16F4-8B45-4A7B-8916-1E98D497B90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D8D16F4-8B45-4A7B-8916-1E98D497B90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D8D16F4-8B45-4A7B-8916-1E98D497B90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA89E0B9-D445-4511-9A82-0CCD640FE37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA89E0B9-D445-4511-9A82-0CCD640FE37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA89E0B9-D445-4511-9A82-0CCD640FE37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA89E0B9-D445-4511-9A82-0CCD640FE37E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

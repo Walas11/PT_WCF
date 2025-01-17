@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CoreWCF.ConfigurationManager" Version="1.6.0" />
+    <PackageReference Include="CoreWCF.Http" Version="1.6.0" />
+    <PackageReference Include="CoreWCF.Primitives" Version="1.6.0" />
+    <PackageReference Include="SoapCore" Version="1.1.0.51" />
+    <PackageReference Include="System.ServiceModel.Http" Version="8.1.1" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PT_InfraestructuraWCF\PT_InfraestructuraWCF.csproj" />
+    <ProjectReference Include="..\RegisterUserWCF\RegisterUserWCF.csproj" />
   </ItemGroup>
 
 </Project>

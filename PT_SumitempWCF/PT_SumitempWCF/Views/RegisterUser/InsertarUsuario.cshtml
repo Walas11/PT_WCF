@@ -5,13 +5,13 @@
     <form asp-action="InsertarUsuario" asp-controller="RegisterUser" method="post">
         <div class="form-group">
             <label for="DocumentoIdentidad">Documento Identidad</label>
-            <input type="text" class="form-control" id="DocumentoIdentidad" name="DocumentoIdentidad" required />
+            <input type="text" class="form-control" id="DocumentoIdentidad" name="DocumentoIdentidad" required pattern="^[a-zA-Z0-9]+$" title="Solo se permiten caracteres alfanuméricos (letras y números)" />
 
             <label for="Nombres">Nombres</label>
-            <input type="text" class="form-control" id="Nombres" name="Nombres" required />
+            <input type="text" class="form-control" id="Nombres" name="Nombres" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" title="Solo se permiten letras del alfabeto latino y espacios" />
 
             <label for="Apellidos">Apellidos</label>
-            <input type="text" class="form-control" id="Apellidos" name="Apellidos" required />
+            <input type="text" class="form-control" id="Apellidos" name="Apellidos" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" title="Solo se permiten letras del alfabeto latino y espacios" />
 
             <label for="FechaNacimiento">Fecha de Nacimiento</label>
             <input type="text" class="form-control" id="FechaNacimiento" name="FechaNacimiento" required />
@@ -23,10 +23,10 @@
             <input type="text" class="form-control" id="Email2" name="CorreoElectronico[1]" />
 
             <label for="Telefonos">Telefono</label>
-            <input type="text" class="form-control" id="Telefonos" name="Telefonos[0]" required />
+            <input type="text" class="form-control" id="Telefonos" name="Telefonos[0]" required pattern="^\d+$" title="El teléfono solo puede contener números" />
 
             <label for="Telefono2">Telefono2</label>
-            <input type="text" class="form-control" id="Telefono2" name="Telefonos[1]" />
+            <input type="text" class="form-control" id="Telefono2" name="Telefonos[1]" pattern="^\d+$" title="El teléfono solo puede contener números" />
 
             <label for="Direccion">Direccion</label>
             <input type="text" class="form-control" id="Direccion" name="Direccion[0]" required />

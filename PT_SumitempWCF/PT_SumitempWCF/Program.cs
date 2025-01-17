@@ -1,5 +1,9 @@
+using CoreWCF;
+using CoreWCF.Configuration;
 using PT_InfraestructuraWCF.Repository.RegisterUser;
 using PT_SumitempWCF.Services;
+using RegisterUserWCF;
+using SoapCore;
 
 namespace PT_SumitempWCF
 {
@@ -17,11 +21,19 @@ namespace PT_SumitempWCF
                 return new DataBaseRegisterUser(connectionString);
             });
 
+
+            // Configurar servicios WCF
+            builder.Services.AddServiceModelServices();
+            //builder.Services.AddServiceModelMetadata(); // Configuración de metadata
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             
 
             var app = builder.Build();
+
+            // Usar SoapCore y mapear el servicio
+            app.UseRouting();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
