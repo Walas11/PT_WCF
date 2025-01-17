@@ -1,0 +1,49 @@
+﻿@model PT_SumitempWCF.Models.UserDto
+
+<div class="container">
+    <h2>Insertar Usuario</h2>
+    <form asp-action="InsertarUsuario" asp-controller="RegisterUser" method="post">
+        <div class="form-group">
+            <label for="DocumentoIdentidad">Documento Identidad</label>
+            <input type="text" class="form-control" id="DocumentoIdentidad" name="DocumentoIdentidad" required />
+
+            <label for="Nombres">Nombres</label>
+            <input type="text" class="form-control" id="Nombres" name="Nombres" required />
+
+            <label for="Apellidos">Apellidos</label>
+            <input type="text" class="form-control" id="Apellidos" name="Apellidos" required />
+
+            <label for="FechaNacimiento">Fecha de Nacimiento</label>
+            <input type="text" class="form-control" id="FechaNacimiento" name="FechaNacimiento" required />
+
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" id="Email" name="CorreoElectronico[0]" required />
+
+            <label for="Email2">Email2</label>
+            <input type="text" class="form-control" id="Email2" name="CorreoElectronico[1]" />
+
+            <label for="Telefonos">Telefono</label>
+            <input type="text" class="form-control" id="Telefonos" name="Telefonos[0]" required />
+
+            <label for="Telefono2">Telefono2</label>
+            <input type="text" class="form-control" id="Telefono2" name="Telefonos[1]" />
+
+            <label for="Direccion">Direccion</label>
+            <input type="text" class="form-control" id="Direccion" name="Direccion[0]" required />
+
+            <label for="Direccion2">Direccion2</label>
+            <input type="text" class="form-control" id="Direccion2" name="Direccion[1]" />
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+
+@if (ViewData.ModelState != null && ViewData.ModelState.Values.Any(v => v.Errors.Any()))
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}

@@ -1,0 +1,52 @@
+﻿@model List<PT_SumitempWCF.Models.UserDto>
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Tabla Usuarios</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <a href="@Url.Action("InsertarUsuario", "RegisterUser")" class="btn btn-sm btn-outline-secondary">Insertar Usuario</a>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Identificación</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha Nacimiento</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Teléfono 2</th>
+                <th scope="col">Email</th>
+                <th scope="col">Email 2</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Dirección 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@usuario.DocumentoIdentidad</td>
+                    <td>@usuario.Nombres</td>
+                    <td>@usuario.Apellidos</td>
+                    <td>@usuario.FechaNacimiento.ToShortDateString()</td>
+                    <!-- Verifica si el teléfono existe antes de acceder al índice -->
+                    <td>@(usuario.Telefonos.Count > 0 ? usuario.Telefonos[0] : "N/A")</td>
+                    <td>@(usuario.Telefonos.Count > 1 ? usuario.Telefonos[1] : "N/A")</td>
+
+                    <!-- Verifica si el correo electrónico existe antes de acceder al índice -->
+                    <td>@(usuario.CorreoElectronico.Count > 0 ? usuario.CorreoElectronico[0] : "N/A")</td>
+                    <td>@(usuario.CorreoElectronico.Count > 1 ? usuario.CorreoElectronico[1] : "N/A")</td>
+
+                    <!-- Verifica si el correo electrónico existe antes de acceder al índice -->
+                    <td>@(usuario.Direccion.Count > 0 ? usuario.Direccion[0] : "N/A")</td>
+                    <td>@(usuario.Direccion.Count > 1 ? usuario.Direccion[1] : "N/A")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
